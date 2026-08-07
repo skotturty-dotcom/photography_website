@@ -57,7 +57,7 @@ export const WhyChooseUs = () => {
             return (
               <div
                 key={pillar.id}
-                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] p-8 rounded-sm space-y-5 shadow-xl hover:shadow-[0_15px_35px_rgba(167,139,250,0.3)] hover:border-purple-300 transition-all duration-300 group"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] p-8 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-5 shadow-xl hover:shadow-[0_15px_35px_rgba(167,139,250,0.35)] hover:border-purple-300 transition-all duration-300 group"
               >
                 <div>
                   <div className="w-12 h-12 rounded-full bg-white/15 text-white border border-white/40 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-white transition-all">
