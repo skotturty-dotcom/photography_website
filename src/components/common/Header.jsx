@@ -64,12 +64,12 @@ export const Header = () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-            className="group flex flex-col items-start"
+            className="group flex flex-col items-start shrink"
           >
-            <span className="font-heading text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#000000] group-hover:text-[#7C3AED] transition-colors">
+            <span className="font-heading text-lg sm:text-2xl font-bold tracking-[0.15em] sm:tracking-[0.2em] text-[#000000] group-hover:text-[#7C3AED] transition-colors leading-tight">
               ARJUN MEHRA
             </span>
-            <span className="text-[10px] tracking-[0.35em] text-[#7C3AED] font-body uppercase font-extrabold -mt-0.5">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.35em] text-[#7C3AED] font-body uppercase font-extrabold -mt-0.5">
               PHOTOGRAPHY
             </span>
           </Link>
@@ -118,18 +118,18 @@ export const Header = () => {
           </div>
 
           {/* MOBILE HAMBURGER BUTTON */}
-          <div className="flex lg:hidden items-center space-x-3">
+          <div className="flex lg:hidden items-center space-x-2 shrink-0">
             <button
               type="button"
               onClick={() => setIsBookingModalOpen(true)}
-              className="px-5 py-2.5 bg-[#7C3AED] text-white uppercase tracking-[0.2em] font-extrabold text-[11px] rounded-sm hover:bg-[#6D28D9] transition-all shadow-md cursor-pointer"
+              className="px-3 sm:px-5 py-2 sm:py-2.5 bg-[#7C3AED] text-white uppercase tracking-wider text-[10px] sm:text-[11px] font-extrabold rounded-sm hover:bg-[#6D28D9] transition-all shadow-md cursor-pointer"
             >
               BOOK A SHOOT
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#000000] hover:text-[#7C3AED] focus:outline-none"
+              className="p-1.5 text-[#000000] hover:text-[#7C3AED] focus:outline-none"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

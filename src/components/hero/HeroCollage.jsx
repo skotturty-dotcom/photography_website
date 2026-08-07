@@ -116,8 +116,8 @@ export const HeroCollage = () => {
           </div>
 
           {/* RIGHT COLUMN: HIGH-IMPACT EDITORIAL PHOTO COLLAGE */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative w-full max-w-lg mx-auto aspect-[4/5]">
+          <div className="lg:col-span-6 relative overflow-hidden sm:overflow-visible">
+            <div className="relative w-full max-w-[330px] sm:max-w-lg mx-auto aspect-[4/5]">
               
               {/* 1. Main Large Vertical Frame */}
               <div className="absolute top-0 left-0 w-[72%] h-[82%] rounded-sm overflow-hidden border-4 border-white shadow-2xl z-10 group bg-purple-100">
