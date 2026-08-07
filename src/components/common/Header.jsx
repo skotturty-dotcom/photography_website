@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Calendar } from 'lucide-react';
 import { photographerConfig } from '../../config/photographerConfig';
 import { BookingModal } from '../modal/BookingModal';
 
@@ -39,12 +39,14 @@ export const Header = () => {
   ];
 
   const handleNavClick = (e, link) => {
+    setMobileMenuOpen(false);
     if (location.pathname === '/') {
-      e.preventDefault();
       const el = document.getElementById(link.sectionId);
       if (el) {
+        e.preventDefault();
         el.scrollIntoView({ behavior: 'smooth' });
       } else if (link.sectionId === 'hero') {
+        e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
@@ -59,6 +61,7 @@ export const Header = () => {
           <Link
             to="/"
             onClick={(e) => {
+              setMobileMenuOpen(false);
               if (location.pathname === '/') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -74,7 +77,7 @@ export const Header = () => {
             </span>
           </Link>
 
-          {/* DESKTOP NAVIGATION (100% DEEP DARK BLACK FONTS) */}
+          {/* DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center space-x-7">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -121,15 +124,19 @@ export const Header = () => {
           <div className="flex lg:hidden items-center space-x-2 shrink-0">
             <button
               type="button"
-              onClick={() => setIsBookingModalOpen(true)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setIsBookingModalOpen(true);
+              }}
               className="px-3 sm:px-5 py-2 sm:py-2.5 bg-[#7C3AED] text-white uppercase tracking-wider text-[10px] sm:text-[11px] font-extrabold rounded-sm hover:bg-[#6D28D9] transition-all shadow-md cursor-pointer"
             >
               BOOK A SHOOT
             </button>
 
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 text-[#000000] hover:text-[#7C3AED] focus:outline-none"
+              className="p-1.5 text-[#000000] hover:text-[#7C3AED] focus:outline-none cursor-pointer z-50"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -141,8 +148,8 @@ export const Header = () => {
 
       {/* MOBILE FULLSCREEN OVERLAY MENU */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-white/98 backdrop-blur-xl pt-24 px-6 pb-10 flex flex-col justify-between animate-fade-in lg:hidden border-b-2 border-purple-200">
-          <div className="space-y-6 text-center">
+        <div className="fixed inset-0 z-[70] bg-white/98 backdrop-blur-xl pt-24 px-6 pb-28 flex flex-col justify-between overflow-y-auto animate-fade-in lg:hidden border-b-2 border-purple-200">
+          <div className="space-y-4 text-center py-4">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -150,8 +157,8 @@ export const Header = () => {
                   key={link.path}
                   to={link.path}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`block text-lg uppercase tracking-[0.25em] font-extrabold ${
-                    isActive ? 'text-[#7C3AED]' : 'text-[#000000] hover:text-[#7C3AED]'
+                  className={`block py-2.5 text-xl uppercase tracking-[0.2em] font-black transition-all cursor-pointer ${
+                    isActive ? 'text-[#7C3AED]' : 'text-[#000000] active:text-[#7C3AED]'
                   }`}
                 >
                   {link.name}
@@ -160,21 +167,26 @@ export const Header = () => {
             })}
           </div>
 
-          <div className="space-y-4 text-center pt-6 border-t-2 border-purple-200">
+          <div className="space-y-3 text-center pt-6 border-t-2 border-purple-200">
             <a
               href={`tel:${photographerConfig.phone}`}
-              className="w-full py-3.5 bg-purple-100 text-[#000000] font-bold text-xs uppercase tracking-widest rounded-sm flex items-center justify-center space-x-2"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full py-3.5 bg-purple-100 text-[#000000] font-extrabold text-xs uppercase tracking-widest rounded-sm flex items-center justify-center space-x-2 active:bg-purple-200"
             >
               <Phone className="w-4 h-4 text-[#7C3AED]" />
               <span>Call Studio: {photographerConfig.phoneDisplay}</span>
             </a>
 
-            <Link
-              to="/booking"
-              className="block w-full py-4 bg-[#A78BFA] text-white text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-md"
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setIsBookingModalOpen(true);
+              }}
+              className="w-full py-4 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-[0.2em] rounded-sm shadow-md active:bg-[#6D28D9] cursor-pointer"
             >
               Book Your Date Now
-            </Link>
+            </button>
           </div>
         </div>
       )}
