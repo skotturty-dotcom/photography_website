@@ -68,9 +68,9 @@ export const HeroCollage = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-[#000000] tracking-tight leading-[1.1]">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-[#000000] tracking-tight leading-[1.05]">
               Stories That <br />
-              <span className="italic font-normal text-4xl sm:text-6xl lg:text-7xl text-purple-700">Deserve To Be</span> <br />
+              <span className="font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl xl:text-9xl text-purple-700 leading-none">Deserve To Be</span> <br />
               Remembered.
             </h1>
 
