@@ -68,7 +68,7 @@ export const WhyChooseUs = () => {
                   </span>
                 </div>
 
-                <h3 className="font-sans text-xl sm:text-2xl !text-[#F3E8FF] font-bold group-hover:!text-white transition-colors leading-snug tracking-normal">
+                <h3 className="font-sans text-xl sm:text-2xl !text-[#C4B5FD] font-bold leading-snug tracking-normal">
                   {pillar.title}
                 </h3>
 
