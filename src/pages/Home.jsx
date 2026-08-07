@@ -148,16 +148,16 @@ export const Home = () => {
             {servicesData.slice(0, 8).map((service) => (
               <div
                 key={service.id}
-                className="bg-gradient-to-b from-white via-white to-purple-50/60 border-2 border-purple-200 border-t-4 border-t-purple-700 p-6 rounded-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] p-6 rounded-sm space-y-5 shadow-xl hover:shadow-[0_15px_35px_rgba(167,139,250,0.3)] hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs text-purple-700 font-bold bg-purple-100/80 border border-purple-200 px-3 py-1 rounded">
+                    <span className="font-mono text-xs !text-white font-extrabold bg-white/20 px-3 py-1 rounded-full border border-white/40 shadow-xs tracking-wider">
                       SERVICE {service.number}
                     </span>
                   </div>
 
-                  <div className="aspect-[16/9] overflow-hidden rounded-sm bg-studio-elevated border border-purple-200">
+                  <div className="aspect-[16/9] overflow-hidden rounded-sm bg-purple-950 border border-purple-400/40">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -165,16 +165,16 @@ export const Home = () => {
                     />
                   </div>
 
-                  <h3 className="font-body text-xl sm:text-2xl text-studio-text font-bold tracking-normal group-hover:text-purple-700 transition-colors leading-snug">
+                  <h3 className="font-sans text-xl sm:text-2xl !text-[#C4B5FD] font-bold leading-snug tracking-normal">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm font-medium text-studio-text leading-relaxed line-clamp-3">
+                  <p className="!text-white text-sm font-semibold leading-relaxed line-clamp-3">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-purple-200">
+                <div className="pt-4 border-t border-purple-500/30">
                   <Link
                     to="/services"
                     className="w-full py-3 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-sm hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-1.5"
