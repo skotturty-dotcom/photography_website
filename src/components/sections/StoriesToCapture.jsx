@@ -71,33 +71,49 @@ export const StoriesToCapture = () => {
                 key={cat.id}
                 to={cat.link}
                 onMouseEnter={() => setActiveCategory(idx)}
-                className={`group block p-6 sm:p-7 rounded-sm border-2 transition-all duration-300 ${
+                className={`group block p-6 sm:p-7 rounded-tl-2xl rounded-br-2xl rounded-tr-xs rounded-bl-xs border-2 transition-all duration-300 relative overflow-hidden ${
                   activeCategory === idx
-                    ? 'bg-white border-purple-500 shadow-xl translate-x-2'
-                    : 'bg-white/60 border-purple-200 hover:border-purple-300'
+                    ? 'bg-gradient-to-r from-[#3B2B52] via-[#312247] to-[#26183B] border-purple-400/80 shadow-2xl translate-x-2 animated-border-card-active'
+                    : 'bg-white border-purple-200 hover:border-purple-400 hover:shadow-lg'
                 }`}
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between relative z-10">
                   <div className="flex items-center space-x-4 sm:space-x-6">
-                    <span className="font-mono text-xs text-purple-700 font-extrabold bg-purple-100 px-3 py-1 rounded">
+                    <span className={`font-mono text-xs font-black px-3 py-1 rounded-full ${
+                      activeCategory === idx
+                        ? 'bg-[#C084FC] text-purple-950 shadow-md'
+                        : 'bg-purple-100 text-purple-800'
+                    }`}>
                       {cat.id}
                     </span>
                     <div>
-                      <h3 className="font-sans text-xl sm:text-2xl text-[#000000] font-bold tracking-normal group-hover:text-purple-700 transition-colors">
+                      <h3 className={`font-sans text-xl sm:text-2xl font-black tracking-tight transition-colors ${
+                        activeCategory === idx ? 'text-white' : 'text-[#000000] group-hover:text-purple-700'
+                      }`}>
                         {cat.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#475569] font-medium pt-1">
+                      <p className={`text-xs sm:text-sm font-semibold pt-1 ${
+                        activeCategory === idx ? 'text-[#C4B5FD]' : 'text-[#475569]'
+                      }`}>
                         {cat.subtitle}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3 shrink-0">
-                    <span className="hidden sm:inline-block text-[10px] uppercase font-mono tracking-widest text-purple-700 font-bold bg-purple-50 px-2.5 py-1 rounded border border-purple-200">
+                    <span className={`hidden sm:inline-block text-[10px] uppercase font-mono tracking-widest font-extrabold px-3 py-1 rounded-full border ${
+                      activeCategory === idx
+                        ? 'bg-white/15 border-white/30 text-white'
+                        : 'bg-purple-50 border-purple-200 text-purple-800'
+                    }`}>
                       {cat.count}
                     </span>
-                    <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center group-hover:bg-[#A78BFA] group-hover:text-white transition-colors shadow-xs">
-                      <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md ${
+                      activeCategory === idx
+                        ? 'bg-[#C084FC] text-purple-950'
+                        : 'bg-purple-100 text-purple-700 group-hover:bg-purple-700 group-hover:text-white'
+                    }`}>
+                      <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform stroke-[2.5]" />
                     </div>
                   </div>
                 </div>
@@ -107,7 +123,7 @@ export const StoriesToCapture = () => {
 
           {/* RIGHT: Dynamic High-Res Photography Preview Box */}
           <div className="lg:col-span-5">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden border-4 border-white shadow-2xl bg-purple-100 group">
+            <div className="relative aspect-[3/4] rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm overflow-hidden border-4 border-white shadow-2xl bg-purple-950 group">
               <img
                 src={categories[activeCategory].image}
                 alt={categories[activeCategory].title}

@@ -41,18 +41,23 @@ export const PreweddingGuideSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-700 p-8 rounded-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] p-8 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-5 shadow-2xl hover:shadow-[0_20px_50px_rgba(192,132,252,0.35)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
               >
                 <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
-                    <IconComp className="w-6 h-6" />
+                  <div className="flex items-center justify-between">
+                    <div className="w-13 h-13 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 border-2 border-white transition-transform">
+                      <IconComp className="w-6 h-6 !text-white stroke-[2]" />
+                    </div>
+                    <span className="text-[10px] font-mono font-extrabold text-[#C084FC] bg-white/10 border border-white/20 px-3 py-1 rounded-full uppercase tracking-widest">
+                      0{idx + 1} STEP
+                    </span>
                   </div>
 
-                  <h3 className="font-sans text-xl text-[#000000] font-bold group-hover:text-purple-700 transition-colors leading-snug tracking-normal">
+                  <h3 className="font-sans text-xl text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight">
                     {pt.title}
                   </h3>
 
-                  <p className="text-sm text-[#000000] font-semibold leading-relaxed">
+                  <p className="text-sm text-[#C4B5FD] font-semibold leading-relaxed">
                     {pt.desc}
                   </p>
                 </div>
