@@ -60,10 +60,10 @@ export const WhyChooseUs = () => {
                 className="bg-gradient-to-br from-[#1E1A2B] via-[#161224] to-[#0F0A1C] border-2 border-purple-600/60 border-t-4 border-t-[#A78BFA] p-8 rounded-sm space-y-5 shadow-2xl hover:shadow-[0_15px_35px_rgba(124,58,237,0.35)] hover:border-purple-400 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-full bg-purple-950/90 text-purple-300 border border-purple-500/40 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                    <IconComp className="w-6 h-6 text-purple-300" />
+                  <div className="w-12 h-12 rounded-full bg-white/15 text-white border border-white/40 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-white transition-all">
+                    <IconComp className="w-6 h-6 !text-white group-hover:!text-purple-950 transition-colors" />
                   </div>
-                  <span className="font-mono text-xs text-purple-300 font-extrabold bg-purple-900/80 px-3 py-1 rounded border border-purple-500/40 shadow-xs">
+                  <span className="font-mono text-xs !text-white font-extrabold bg-white/15 px-3 py-1 rounded-full border border-white/40 shadow-xs tracking-wider">
                     PILLAR {pillar.id}
                   </span>
                 </div>
