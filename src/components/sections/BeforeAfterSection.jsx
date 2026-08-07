@@ -150,25 +150,24 @@ export const BeforeAfterSection = () => {
             <img
               src={currentEx.image}
               alt="Master Color Graded Edit"
-              className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ${currentEx.editedStyle}`}
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-300 ${currentEx.editedStyle}`}
             />
-            <div className="absolute top-4 right-4 bg-purple-900/95 text-white font-mono text-xs font-extrabold px-4 py-1.5 rounded-full backdrop-blur-md border border-purple-300 shadow-lg z-10 flex items-center space-x-1.5">
+            <div className="absolute top-4 right-4 bg-purple-900/95 text-white font-mono text-xs font-extrabold px-4 py-1.5 rounded-full backdrop-blur-md border border-purple-300 shadow-lg z-10 flex items-center space-x-1.5 pointer-events-none">
               <Sparkles className="w-3.5 h-3.5 text-purple-300 animate-pulse" />
               <span>MASTER COLOR GRADE</span>
             </div>
 
-            {/* BEFORE IMAGE (RAW Flat Camera Profile - Clipped Container matching 1:1 outer width) */}
+            {/* BEFORE IMAGE (RAW Flat Camera Profile - Identical 1:1 size clipped via CSS clip-path) */}
             <div
-              className="absolute inset-0 overflow-hidden"
-              style={{ width: `${sliderPos}%` }}
+              className="absolute inset-0 z-10"
+              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
             >
               <img
                 src={currentEx.image}
                 alt="RAW Flat Camera Profile"
-                className={`absolute top-0 left-0 h-full max-w-none object-cover object-top transition-all duration-500 ${currentEx.rawStyle}`}
-                style={{ width: containerWidth ? `${containerWidth}px` : '100vw' }}
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-300 ${currentEx.rawStyle}`}
               />
-              <div className="absolute top-4 left-4 bg-black/80 text-white font-mono text-xs font-bold px-4 py-1.5 rounded-full backdrop-blur-md border border-white/20 shadow-lg z-10 whitespace-nowrap">
+              <div className="absolute top-4 left-4 bg-black/85 text-white font-mono text-xs font-bold px-4 py-1.5 rounded-full backdrop-blur-md border border-white/20 shadow-lg whitespace-nowrap pointer-events-none">
                 RAW UNEDITED CAMERA FILE
               </div>
             </div>
