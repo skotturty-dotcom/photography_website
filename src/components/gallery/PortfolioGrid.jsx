@@ -23,27 +23,26 @@ export const PortfolioGrid = ({ initialCategory = 'ALL', limit }) => {
 
   return (
     <div className="space-y-10">
-      {/* FILTER BUTTONS */}
-      {!limit && (
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 pb-4">
-          {portfolioCategories.map((cat) => {
-            const isActive = activeCategory === cat;
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 text-[11px] uppercase tracking-[0.2em] transition-all duration-300 rounded-sm font-semibold border ${
-                  isActive
-                    ? 'bg-studio-gold text-white border-studio-gold shadow-md'
-                    : 'bg-white text-studio-muted border-studio-border hover:border-studio-gold hover:text-studio-text shadow-xs'
-                }`}
-              >
-                {cat}
-              </button>
-            );
-          })}
-        </div>
-      )}
+      {/* FILTER CATEGORY TABS */}
+      <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 pb-4">
+        {portfolioCategories.map((cat) => {
+          const isActive = activeCategory === cat;
+          return (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-[0.2em] transition-all duration-300 rounded-full cursor-pointer shadow-xs ${
+                isActive
+                  ? 'bg-[#7C3AED] text-white border-2 border-purple-400 shadow-lg scale-105'
+                  : 'bg-white text-purple-950 border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 shadow-xs'
+              }`}
+            >
+              {cat}
+            </button>
+          );
+        })}
+      </div>
 
       {/* GALLERY EDITORIAL GRID */}
       {displayedItems.length > 0 ? (

@@ -49,6 +49,15 @@ export const Header = () => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    } else if (link.sectionId === 'portfolio' || link.sectionId === 'services' || link.sectionId === 'packages' || link.sectionId === 'faq') {
+      e.preventDefault();
+      navigate('/', { replace: false });
+      setTimeout(() => {
+        const el = document.getElementById(link.sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
     }
   };
 

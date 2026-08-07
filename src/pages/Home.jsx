@@ -111,22 +111,12 @@ export const Home = () => {
       <section id="portfolio" className="py-24 sm:py-32 bg-white border-b border-studio-border scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <SectionHeading
-            subtitle="SELECTED STORIES"
-            title="A collection of moments, emotions and celebrations."
-            description="Filter by category to explore authentic wedding stories, couple portraits, events, and cinematic films."
+            subtitle="COMPLETE PHOTOGRAPHY SHOWCASE"
+            title="Every Celebration, Emotion & Authentic Story."
+            description="Explore our full portfolio gallery across all photography genres — from royal weddings and pre-wedding romance to high-fashion portraits, gala events, and cinematic films."
           />
 
-          <PortfolioGrid limit={9} />
-
-          <div className="text-center pt-8">
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center space-x-2 px-8 py-4 border border-studio-gold text-studio-gold hover:bg-studio-gold hover:text-white uppercase tracking-[0.2em] text-xs font-semibold rounded-sm transition-all shadow-xs"
-            >
-              <span>View Full 30+ Gallery Portfolio</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+          <PortfolioGrid />
         </div>
       </section>
 
