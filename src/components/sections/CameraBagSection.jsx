@@ -50,41 +50,41 @@ export const CameraBagSection = () => {
 
   return (
     <section className="py-24 sm:py-32 bg-[#FAF7FD] border-b border-purple-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <SectionHeading
           subtitle="TECHNICAL CRAFTSMANSHIP"
           title="Inside Arjun's Master Camera Bag"
           description="Flagship optics, studio flash lighting, and redundant data security that empower us to capture flawless images in any environment."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {gearItems.map((gear, idx) => {
             const IconComp = gear.icon;
             return (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-3 border-t-[#C084FC] p-5 sm:p-6 rounded-tl-2xl rounded-br-2xl rounded-tr-xs rounded-bl-xs space-y-3 shadow-xl hover:shadow-[0_15px_35px_rgba(192,132,252,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-3 border-t-[#C084FC] p-4 sm:p-5 rounded-tl-xl rounded-br-xl rounded-tr-xs rounded-bl-xs space-y-2.5 shadow-lg hover:shadow-[0_10px_25px_rgba(192,132,252,0.3)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
               >
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 border border-white transition-transform">
-                      <IconComp className="w-5 h-5 !text-white stroke-[2.2]" />
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 border border-white transition-transform">
+                      <IconComp className="w-4 h-4 !text-white stroke-[2.2]" />
                     </div>
-                    <span className="text-[9px] sm:text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#C084FC] bg-white/15 border border-white/25 px-3 py-1 rounded-full shadow-xs">
+                    <span className="text-[9px] font-mono font-extrabold uppercase tracking-widest text-[#C084FC] bg-white/15 border border-white/25 px-2.5 py-0.5 rounded-full shadow-xs">
                       {gear.badge}
                     </span>
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#C084FC] block">
+                    <span className="text-[9px] font-mono font-extrabold uppercase tracking-widest text-[#C084FC] block">
                       {gear.category}
                     </span>
-                    <h3 className="font-sans text-lg sm:text-xl text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight pt-0.5">
+                    <h3 className="font-sans text-base sm:text-lg text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight pt-0.5">
                       {gear.model}
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-white/95 font-semibold leading-relaxed">
+                  <p className="text-xs text-white/90 font-medium leading-relaxed">
                     {gear.desc}
                   </p>
                 </div>
