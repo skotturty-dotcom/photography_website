@@ -63,28 +63,28 @@ export const CameraBagSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-700 p-8 rounded-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] p-8 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-5 shadow-2xl hover:shadow-[0_20px_50px_rgba(192,132,252,0.35)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center shadow-xs group-hover:scale-110 group-hover:bg-purple-700 group-hover:text-white transition-all duration-300">
-                      <IconComp className="w-6 h-6" />
+                    <div className="w-13 h-13 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 border-2 border-white transition-transform">
+                      <IconComp className="w-6 h-6 !text-white stroke-[2]" />
                     </div>
-                    <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-purple-900 bg-purple-100 px-3 py-1 rounded border border-purple-300">
+                    <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#C084FC] bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full shadow-md">
                       {gear.badge}
                     </span>
                   </div>
 
                   <div>
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-purple-700 block">
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#C084FC] block">
                       {gear.category}
                     </span>
-                    <h3 className="font-sans text-xl text-[#000000] font-bold group-hover:text-purple-700 transition-colors leading-snug tracking-normal pt-1">
+                    <h3 className="font-sans text-xl sm:text-2xl text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight pt-1">
                       {gear.model}
                     </h3>
                   </div>
 
-                  <p className="text-sm text-[#000000] font-semibold leading-relaxed">
+                  <p className="text-sm text-[#C4B5FD] font-semibold leading-relaxed">
                     {gear.desc}
                   </p>
                 </div>
