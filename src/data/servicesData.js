@@ -61,36 +61,8 @@ export const servicesData = [
   },
   {
     number: "05",
-    id: "fashion-photography",
-    title: "Fashion Photography",
-    tagline: "High-impact editorial imagery for couture designers & brands.",
-    description: "Creative direction, precise studio lighting, and high-fashion aesthetics that bring designer collections, lookbooks, and campaigns to life with editorial sophistication.",
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop",
-    includes: [
-      "Lookbook & campaign photography",
-      "Studio / on-location lighting setup",
-      "Commercial license options",
-      "Magazine-quality high-end retouching"
-    ]
-  },
-  {
-    number: "06",
-    id: "corporate-photography",
-    title: "Corporate Photography",
-    tagline: "Polished headshots & brand story imagery for modern leaders.",
-    description: "Elevate your corporate identity with clean, professional team portraits, executive headshots, and corporate office lifestyle imagery.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1600&auto=format&fit=crop",
-    includes: [
-      "On-site studio mobile setup for leadership teams",
-      "Uniform background & lighting consistency",
-      "Quick turnaround for PR & website publishing",
-      "Full commercial rights"
-    ]
-  },
-  {
-    number: "07",
     id: "cinematic-films",
-    title: "Cinematic Films",
+    title: "Cinematic 4K Films",
     tagline: "Emotive 4K video storytelling crafted with motion picture elegance.",
     description: "We craft cinematic wedding films that capture audio vows, spontaneous laughter, and soaring background scores into an heirloom film you will rewatch for decades.",
     image: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1600&auto=format&fit=crop",
@@ -103,17 +75,73 @@ export const servicesData = [
     ]
   },
   {
+    number: "06",
+    id: "fashion-photography",
+    title: "Fashion & Editorial",
+    tagline: "High-impact editorial imagery for couture designers & brands.",
+    description: "Creative direction, precise studio lighting, and high-fashion aesthetics that bring designer collections, lookbooks, and campaigns to life with editorial sophistication.",
+    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop",
+    includes: [
+      "Lookbook & campaign photography",
+      "Studio / on-location lighting setup",
+      "Commercial license options",
+      "Magazine-quality high-end retouching"
+    ]
+  },
+  {
+    number: "07",
+    id: "maternity-photography",
+    title: "Maternity & Newborn",
+    tagline: "Intimate maternity glow sessions & tender newborn keepsakes.",
+    description: "Celebrating the journey of new life with gentle natural lighting, soft organic textures, and peaceful heirloom portraits of your growing family.",
+    image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=1600&auto=format&fit=crop",
+    includes: [
+      "Private comfortable studio or outdoor location",
+      "Gown styling & family inclusion options",
+      "Safety-first newborn pose handling",
+      "Fine-art retouched memory gallery"
+    ]
+  },
+  {
     number: "08",
     id: "drone-photography",
     title: "Drone & Aerial Coverage",
     tagline: "Grand aerial perspectives of your venue, decor and celebrations.",
-    description: "Add a panoramic cinematic perspective to your destination venue, outdoor baraat, or venue aesthetics with licensed aerial photography.",
+    description: "Add a panoramic cinematic perspective to your destination venue, outdoor baraat, or venue aesthetics with licensed 5K aerial drone photography.",
     image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1600&auto=format&fit=crop",
     includes: [
       "Certified drone pilot operation",
       "4K aerial video & high-res aerial stills",
       "Venue panorama & wide crowd shots",
       "Seamless integration into main film edit"
+    ]
+  },
+  {
+    number: "09",
+    id: "commercial-photography",
+    title: "Commercial & Product",
+    tagline: "Luxury jewelry, architecture & premium brand campaigns.",
+    description: "Meticulous macro jewelry lighting, architectural space photography, and high-conversion e-commerce brand imagery for luxury labels.",
+    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop",
+    includes: [
+      "Macro jewelry focus stacking",
+      "Architectural interior & exterior lighting",
+      "Commercial web & print licensing",
+      "Color-accurate studio post-production"
+    ]
+  },
+  {
+    number: "10",
+    id: "corporate-photography",
+    title: "Corporate & Leadership",
+    tagline: "Polished headshots & brand story imagery for modern leaders.",
+    description: "Elevate your corporate identity with clean, professional team portraits, executive headshots, and corporate office lifestyle imagery.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1600&auto=format&fit=crop",
+    includes: [
+      "On-site studio mobile setup for leadership teams",
+      "Uniform background & lighting consistency",
+      "Quick turnaround for PR & website publishing",
+      "Full commercial rights"
     ]
   }
 ];

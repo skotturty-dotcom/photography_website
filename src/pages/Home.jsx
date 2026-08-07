@@ -145,7 +145,7 @@ export const Home = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            {servicesData.slice(0, 4).map((service) => (
+            {servicesData.slice(0, 8).map((service) => (
               <div
                 key={service.id}
                 className="bg-gradient-to-b from-white via-white to-purple-50/60 border-2 border-purple-200 border-t-4 border-t-purple-700 p-6 rounded-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
@@ -177,7 +177,7 @@ export const Home = () => {
                 <div className="pt-4 border-t border-purple-200">
                   <Link
                     to="/services"
-                    className="w-full py-3 bg-[#A78BFA] text-white text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-[#9333EA] transition-colors shadow-md inline-flex items-center justify-center space-x-1.5"
+                    className="w-full py-3 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-sm hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-1.5"
                   >
                     <span>View Service Inclusions</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -190,9 +190,9 @@ export const Home = () => {
           <div className="text-center pt-4">
             <Link
               to="/services"
-              className="px-8 py-4 bg-[#A78BFA] text-white uppercase tracking-[0.2em] text-xs font-bold rounded-sm hover:bg-[#9333EA] transition-colors inline-block shadow-lg"
+              className="px-8 py-4 bg-[#7C3AED] text-white uppercase tracking-[0.2em] text-xs font-extrabold rounded-sm hover:bg-[#6D28D9] transition-colors inline-block shadow-lg"
             >
-              View All 01-08 Services
+              View All 01-10 Services
             </Link>
           </div>
         </div>
