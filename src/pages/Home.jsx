@@ -14,7 +14,6 @@ import { HorizontalStory } from '../components/sections/HorizontalStory';
 import { CinematicBanner } from '../components/sections/CinematicBanner';
 import { WeddingExperience } from '../components/sections/WeddingExperience';
 import { WhyChooseUs } from '../components/sections/WhyChooseUs';
-import { PressFeatures } from '../components/sections/PressFeatures';
 import { PreweddingGuideSection } from '../components/sections/PreweddingGuideSection';
 import { PricingCalculator } from '../components/sections/PricingCalculator';
 import { BeforeAfterSection } from '../components/sections/BeforeAfterSection';
@@ -320,9 +319,6 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* 9.5 PRESS & MEDIA RECOGNITION */}
-      <PressFeatures />
 
       {/* 11. FAQ SECTION (#faq) */}
       <section id="faq" className="py-24 bg-studio-bg border-b border-studio-border scroll-mt-16">
