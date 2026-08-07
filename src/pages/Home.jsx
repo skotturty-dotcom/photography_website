@@ -15,7 +15,6 @@ import { CinematicBanner } from '../components/sections/CinematicBanner';
 import { WeddingExperience } from '../components/sections/WeddingExperience';
 import { WhyChooseUs } from '../components/sections/WhyChooseUs';
 import { PressFeatures } from '../components/sections/PressFeatures';
-import { HeirloomAlbumsSection } from '../components/sections/HeirloomAlbumsSection';
 import { PreweddingGuideSection } from '../components/sections/PreweddingGuideSection';
 import { PricingCalculator } from '../components/sections/PricingCalculator';
 import { BeforeAfterSection } from '../components/sections/BeforeAfterSection';
@@ -219,9 +218,6 @@ export const Home = () => {
 
       {/* 8.2 MASTER CAMERA BAG & OPTICS */}
       <CameraBagSection />
-
-      {/* 8.5 HANDCRAFTED HEIRLOOM ALBUMS & PRINTS */}
-      <HeirloomAlbumsSection />
 
       {/* 8.8 PRE-WEDDING & STYLING GUIDE */}
       <PreweddingGuideSection />
