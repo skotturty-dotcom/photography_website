@@ -139,3 +139,24 @@ p {
   z-index: 2;
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
+
+/* INFINITE HORIZONTAL MARQUEE SLIDER */
+@keyframes marqueeHorizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-horizontal {
+  display: flex;
+  width: max-content;
+  animation: marqueeHorizontal 22s linear infinite;
+}
+
+.animate-marquee-horizontal:hover {
+  animation-play-state: paused;
+}
+
