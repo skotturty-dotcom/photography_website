@@ -93,13 +93,13 @@ export const CinematicBanner = () => {
           </span>
         </div>
 
-        <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight leading-[1.2] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
+        <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold tracking-normal leading-[1.1] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
           THE MOMENTS BETWEEN <br />
-          <span className="font-cursive text-5xl sm:text-7xl md:text-8xl text-[#A78BFA] font-normal normal-case tracking-normal">The Moments.</span>
+          <span className="italic font-normal text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#C4B5FD] tracking-tight">The Moments.</span>
         </h2>
 
         <div className="pt-2 max-w-2xl mx-auto">
-          <p className="font-serif italic !text-white text-lg sm:text-2xl font-bold leading-relaxed drop-shadow-[0_4px_24px_rgba(0,0,0,1)]">
+          <p className="font-sans !text-white text-base sm:text-xl font-bold tracking-wide leading-relaxed drop-shadow-[0_4px_24px_rgba(0,0,0,1)]">
             "Because sometimes the most beautiful photographs aren't planned."
           </p>
         </div>
