@@ -57,10 +57,10 @@ export const WeddingExperience = () => {
                 key={stg.id}
                 onClick={() => setActiveStage(idx)}
                 onMouseEnter={() => setActiveStage(idx)}
-                className={`cursor-pointer p-6 sm:p-8 rounded-sm border-2 transition-all duration-300 ${
+                className={`cursor-pointer p-6 sm:p-8 rounded-tl-2xl rounded-br-2xl rounded-tr-sm rounded-bl-sm border-2 transition-all duration-300 ${
                   activeStage === idx
-                    ? 'bg-white border-purple-500 shadow-xl border-t-4 border-t-purple-700 translate-x-2'
-                    : 'bg-white/70 border-purple-200 hover:border-purple-300'
+                    ? 'bg-white border-purple-500 shadow-2xl translate-x-2 animated-border-card-active'
+                    : 'bg-white/90 border-purple-200 hover:border-purple-400 hover:shadow-lg animated-border-card'
                 }`}
               >
                 <div className="flex items-start space-x-5">
