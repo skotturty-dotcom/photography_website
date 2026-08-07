@@ -3,6 +3,8 @@ import { SectionHeading } from '../common/SectionHeading';
 import { Check, ArrowRight, MessageSquare, Sparkles, Layers } from 'lucide-react';
 import { BookingModal } from '../modal/BookingModal';
 
+import { photographerConfig } from '../../config/photographerConfig';
+
 export const PricingCalculator = () => {
   const [selectedEvents, setSelectedEvents] = useState(['wedding', 'sangeet']);
   const [includePrewedding, setIncludePrewedding] = useState(true);
@@ -44,7 +46,7 @@ export const PricingCalculator = () => {
     ].filter(Boolean).join(', ');
 
     const text = `Hi Arjun, I selected custom wedding scope on your website: Events (${eventNames}), Deliverables (${deliverables}). Please share custom pricing and date availability.`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/${photographerConfig.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleOpenProposalModal = () => {
