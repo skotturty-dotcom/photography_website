@@ -95,7 +95,7 @@ export const BeforeAfterSection = () => {
         />
 
         {/* 4 INTERACTIVE EXAMPLE SELECTOR TABS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {examples.map((ex, idx) => {
             const isSelected = activeExample === idx;
             return (
@@ -106,27 +106,36 @@ export const BeforeAfterSection = () => {
                   setActiveExample(idx);
                   setSliderPos(50);
                 }}
-                className={`p-4 rounded-sm border-2 transition-all duration-300 text-left cursor-pointer flex flex-col justify-between space-y-2 ${
+                className={`p-5 rounded-tl-2xl rounded-br-2xl rounded-tr-sm rounded-bl-sm border-2 transition-all duration-300 text-left cursor-pointer flex flex-col justify-between space-y-3 ${
                   isSelected
-                    ? 'bg-purple-50/90 border-purple-700 shadow-lg border-t-4 border-t-purple-800'
-                    : 'bg-white border-purple-200 hover:border-purple-400'
+                    ? 'bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] shadow-2xl scale-[1.03] z-10 animated-border-card-active'
+                    : 'bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 shadow-md hover:shadow-xl hover:border-purple-400 animated-border-card'
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className={`font-mono text-xs font-bold ${isSelected ? 'text-purple-800' : 'text-purple-400'}`}>
+                  <span className={`font-mono text-[10px] font-extrabold px-2.5 py-0.5 rounded-full tracking-widest shadow-xs ${
+                    isSelected
+                      ? 'bg-white/20 border border-white/40 !text-white'
+                      : 'bg-purple-100/90 border border-purple-300 text-purple-900'
+                  }`}>
                     EXAMPLE {ex.id}
                   </span>
                   {isSelected && (
-                    <div className="w-5 h-5 rounded-full bg-purple-700 text-white flex items-center justify-center">
-                      <Check className="w-3 h-3" />
+                    <div className="w-5 h-5 rounded-full bg-[#C084FC] text-purple-950 flex items-center justify-center font-bold shadow-md">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
                   )}
                 </div>
-                <div>
-                  <h4 className={`font-sans text-sm font-bold tracking-tight ${isSelected ? 'text-purple-950 font-black' : 'text-[#000000]'}`}>
+
+                <div className="space-y-1">
+                  <h4 className={`font-sans text-base font-extrabold tracking-tight leading-snug ${
+                    isSelected ? '!text-[#C4B5FD]' : 'text-[#000000]'
+                  }`}>
                     {ex.title}
                   </h4>
-                  <p className="text-[10px] uppercase font-mono tracking-widest text-purple-700 font-extrabold pt-0.5">
+                  <p className={`text-[10px] uppercase font-mono tracking-widest font-extrabold ${
+                    isSelected ? '!text-white' : 'text-purple-800'
+                  }`}>
                     {ex.category}
                   </p>
                 </div>
