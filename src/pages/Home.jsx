@@ -234,41 +234,61 @@ export const Home = () => {
             description="Designed for intimate ceremonies, multi-day celebrations, and royal destination weddings."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
             {packagesData.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`bg-white rounded-sm p-8 sm:p-10 flex flex-col justify-between space-y-8 relative transition-all duration-300 ${
+                className={`rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm p-8 sm:p-10 flex flex-col justify-between space-y-8 relative transition-all duration-300 ${
                   pkg.highlighted
-                    ? 'border-2 border-studio-gold shadow-2xl scale-105 bg-white z-10'
-                    : 'border border-studio-border hover:border-studio-gold/60 shadow-md hover:shadow-xl'
+                    ? 'bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] shadow-[0_20px_50px_rgba(124,58,237,0.35)] md:scale-105 z-10 animated-border-card-active'
+                    : 'bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 shadow-xl hover:shadow-2xl hover:border-purple-400 animated-border-card'
                 }`}
               >
                 {pkg.highlighted && (
-                  <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-studio-gold text-white text-xs uppercase font-bold tracking-[0.25em] px-6 py-1.5 rounded-full shadow-md">
+                  <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 text-white text-xs uppercase font-extrabold tracking-[0.25em] px-7 py-2 rounded-full shadow-lg border border-purple-300 animate-pulse">
                     {pkg.badge}
                   </span>
                 )}
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <h3 className="font-serif text-3xl sm:text-4xl text-[#000000] font-black tracking-wider uppercase">{pkg.name}</h3>
+                    <h3 className={`font-sans text-3xl sm:text-4xl font-black tracking-wider uppercase ${
+                      pkg.highlighted ? '!text-[#C4B5FD]' : 'text-[#000000]'
+                    }`}>
+                      {pkg.name}
+                    </h3>
                     <div>
-                      <span className="inline-block bg-purple-100 border border-purple-300 text-purple-950 font-sans font-extrabold text-xs sm:text-sm uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-xs">
+                      <span className={`inline-block font-sans font-extrabold text-xs sm:text-sm uppercase tracking-widest px-4 py-1.5 rounded-full shadow-xs ${
+                        pkg.highlighted
+                          ? 'bg-white/20 border border-white/40 !text-white'
+                          : 'bg-purple-100/90 border border-purple-300 text-purple-900'
+                      }`}>
                         {pkg.startingPrice}
                       </span>
                     </div>
-                    <p className="text-[#000000] font-semibold text-sm leading-relaxed pt-1">{pkg.tagline}</p>
+                    <p className={`font-semibold text-sm leading-relaxed pt-1 ${
+                      pkg.highlighted ? '!text-white' : 'text-[#334155]'
+                    }`}>
+                      {pkg.tagline}
+                    </p>
                   </div>
 
-                  <div className="w-full h-[1px] bg-studio-border" />
+                  <div className={`w-full h-[1px] ${pkg.highlighted ? 'bg-purple-500/30' : 'bg-purple-200'}`} />
 
                   <div className="space-y-4">
-                    <h4 className="text-xs uppercase tracking-widest text-studio-text font-bold">Package Inclusions:</h4>
-                    <ul className="space-y-3.5 text-sm sm:text-base text-studio-text font-medium">
+                    <h4 className={`text-xs uppercase tracking-widest font-extrabold ${
+                      pkg.highlighted ? '!text-[#C4B5FD]' : 'text-purple-950'
+                    }`}>
+                      Package Inclusions:
+                    </h4>
+                    <ul className={`space-y-3.5 text-sm sm:text-base font-semibold ${
+                      pkg.highlighted ? '!text-white' : 'text-[#334155]'
+                    }`}>
                       {pkg.features.map((feat, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
-                          <span className="p-0.5 rounded-full bg-studio-gold/15 text-studio-gold shrink-0 mt-0.5">
+                          <span className={`p-1 rounded-full shrink-0 mt-0.5 ${
+                            pkg.highlighted ? 'bg-purple-500/30 text-[#C084FC]' : 'bg-purple-100 text-purple-700'
+                          }`}>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <polyline points="20 6 9 17 4 12" />
                             </svg>
@@ -287,10 +307,10 @@ export const Home = () => {
                       setSelectedPackageScope([`${pkg.name} Package`, pkg.startingPrice]);
                       setIsPackageModalOpen(true);
                     }}
-                    className={`w-full py-4 text-center text-xs uppercase tracking-[0.2em] font-extrabold rounded-sm transition-all block cursor-pointer ${
+                    className={`w-full py-4 text-center text-xs uppercase tracking-[0.2em] font-extrabold rounded-tl-xl rounded-br-xl rounded-tr-xs rounded-bl-xs transition-all block cursor-pointer shadow-lg ${
                       pkg.highlighted
-                        ? 'bg-[#7C3AED] text-white hover:bg-[#6D28D9] shadow-lg'
-                        : 'border-2 border-[#7C3AED] text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white shadow-xs'
+                        ? 'bg-gradient-to-r from-[#7C3AED] to-[#9333EA] text-white hover:from-[#6D28D9] hover:to-[#7E22CE] border border-purple-300'
+                        : 'bg-[#7C3AED] text-white hover:bg-[#6D28D9]'
                     }`}
                   >
                     {pkg.ctaText}

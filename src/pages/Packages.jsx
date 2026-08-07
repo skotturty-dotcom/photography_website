@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { packagesData } from '../data/packagesData';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { FinalCTA } from '../components/sections/FinalCTA';
@@ -32,41 +31,61 @@ export const Packages = () => {
             description="All packages include handcrafted color grading and high-resolution digital cloud delivery."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
             {packagesData.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`bg-white rounded-sm p-8 sm:p-10 flex flex-col justify-between space-y-8 relative transition-all duration-300 ${
+                className={`rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm p-8 sm:p-10 flex flex-col justify-between space-y-8 relative transition-all duration-300 ${
                   pkg.highlighted
-                    ? 'border-2 border-purple-500 shadow-2xl scale-105 bg-white z-10'
-                    : 'border border-purple-200 hover:border-purple-400 shadow-md hover:shadow-xl'
+                    ? 'bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] shadow-[0_20px_50px_rgba(124,58,237,0.35)] md:scale-105 z-10 animated-border-card-active'
+                    : 'bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 shadow-xl hover:shadow-2xl hover:border-purple-400 animated-border-card'
                 }`}
               >
                 {pkg.highlighted && (
-                  <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-700 text-white text-xs uppercase font-extrabold tracking-[0.25em] px-6 py-1.5 rounded-full shadow-md">
+                  <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 text-white text-xs uppercase font-extrabold tracking-[0.25em] px-7 py-2 rounded-full shadow-lg border border-purple-300 animate-pulse">
                     {pkg.badge}
                   </span>
                 )}
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <h3 className="font-serif text-3xl sm:text-4xl text-[#000000] font-black tracking-wider uppercase">{pkg.name}</h3>
+                    <h3 className={`font-sans text-3xl sm:text-4xl font-black tracking-wider uppercase ${
+                      pkg.highlighted ? '!text-[#C4B5FD]' : 'text-[#000000]'
+                    }`}>
+                      {pkg.name}
+                    </h3>
                     <div>
-                      <span className="inline-block bg-purple-100 border border-purple-300 text-purple-950 font-sans font-extrabold text-xs sm:text-sm uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-xs">
+                      <span className={`inline-block font-sans font-extrabold text-xs sm:text-sm uppercase tracking-widest px-4 py-1.5 rounded-full shadow-xs ${
+                        pkg.highlighted
+                          ? 'bg-white/20 border border-white/40 !text-white'
+                          : 'bg-purple-100/90 border border-purple-300 text-purple-900'
+                      }`}>
                         {pkg.startingPrice}
                       </span>
                     </div>
-                    <p className="text-[#000000] font-semibold text-sm leading-relaxed pt-1">{pkg.tagline}</p>
+                    <p className={`font-semibold text-sm leading-relaxed pt-1 ${
+                      pkg.highlighted ? '!text-white' : 'text-[#334155]'
+                    }`}>
+                      {pkg.tagline}
+                    </p>
                   </div>
 
-                  <div className="w-full h-[1px] bg-purple-200" />
+                  <div className={`w-full h-[1px] ${pkg.highlighted ? 'bg-purple-500/30' : 'bg-purple-200'}`} />
 
                   <div className="space-y-4">
-                    <h4 className="text-xs uppercase tracking-widest text-[#000000] font-bold">Package Inclusions:</h4>
-                    <ul className="space-y-3.5 text-sm sm:text-base text-[#000000] font-semibold">
+                    <h4 className={`text-xs uppercase tracking-widest font-extrabold ${
+                      pkg.highlighted ? '!text-[#C4B5FD]' : 'text-purple-950'
+                    }`}>
+                      Package Inclusions:
+                    </h4>
+                    <ul className={`space-y-3.5 text-sm sm:text-base font-semibold ${
+                      pkg.highlighted ? '!text-white' : 'text-[#334155]'
+                    }`}>
                       {pkg.features.map((feat, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
-                          <span className="p-0.5 rounded-full bg-purple-100 text-purple-700 shrink-0 mt-0.5">
+                          <span className={`p-1 rounded-full shrink-0 mt-0.5 ${
+                            pkg.highlighted ? 'bg-purple-500/30 text-[#C084FC]' : 'bg-purple-100 text-purple-700'
+                          }`}>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <polyline points="20 6 9 17 4 12" />
                             </svg>
@@ -82,10 +101,10 @@ export const Packages = () => {
                   <button
                     type="button"
                     onClick={() => handleOpenEnquiryModal(pkg.name, pkg.startingPrice)}
-                    className={`w-full py-4 text-center text-xs uppercase tracking-[0.2em] font-extrabold rounded-sm transition-all block cursor-pointer ${
+                    className={`w-full py-4 text-center text-xs uppercase tracking-[0.2em] font-extrabold rounded-tl-xl rounded-br-xl rounded-tr-xs rounded-bl-xs transition-all block cursor-pointer shadow-lg ${
                       pkg.highlighted
-                        ? 'bg-[#7C3AED] text-white hover:bg-[#6D28D9] shadow-lg'
-                        : 'border-2 border-[#7C3AED] text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white shadow-xs'
+                        ? 'bg-gradient-to-r from-[#7C3AED] to-[#9333EA] text-white hover:from-[#6D28D9] hover:to-[#7E22CE] border border-purple-300'
+                        : 'bg-[#7C3AED] text-white hover:bg-[#6D28D9]'
                     }`}
                   >
                     {pkg.ctaText}
@@ -96,16 +115,16 @@ export const Packages = () => {
           </div>
 
           {/* Custom Package Notice */}
-          <div className="bg-white border-2 border-purple-200 rounded-sm p-8 sm:p-10 text-center space-y-4 max-w-3xl mx-auto shadow-md">
-            <h3 className="font-serif text-3xl text-[#000000] font-bold">Need A Bespoke Custom Package?</h3>
-            <p className="text-[#000000] text-sm sm:text-base font-semibold leading-relaxed max-w-xl mx-auto">
+          <div className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm p-8 sm:p-10 text-center space-y-4 max-w-3xl mx-auto shadow-2xl animated-border-card">
+            <h3 className="font-sans text-3xl !text-[#C4B5FD] font-extrabold">Need A Bespoke Custom Package?</h3>
+            <p className="!text-white text-sm sm:text-base font-semibold leading-relaxed max-w-xl mx-auto">
               Every celebration is unique. Custom packages are available based on your exact timeline, travel location, number of functions, and team requirements.
             </p>
             <div className="pt-2">
               <button
                 type="button"
                 onClick={() => handleOpenEnquiryModal('Custom Bespoke', 'Royal Destination Quote')}
-                className="px-8 py-4 bg-purple-700 text-white uppercase tracking-widest text-xs font-extrabold rounded-sm hover:bg-purple-800 transition-colors inline-block shadow-md cursor-pointer"
+                className="px-8 py-4 bg-[#7C3AED] text-white uppercase tracking-widest text-xs font-extrabold rounded-tl-xl rounded-br-xl hover:bg-[#6D28D9] transition-colors inline-block shadow-lg cursor-pointer"
               >
                 Request Custom Quote
               </button>
