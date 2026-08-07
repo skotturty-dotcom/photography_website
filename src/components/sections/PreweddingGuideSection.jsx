@@ -35,29 +35,29 @@ export const PreweddingGuideSection = () => {
           description="Everything you need to know for a relaxed, fun, and breathtaking shoot."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
           {guidePoints.map((pt, idx) => {
             const IconComp = pt.icon;
             return (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-4 border-t-[#C084FC] p-8 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-5 shadow-2xl hover:shadow-[0_20px_50px_rgba(192,132,252,0.35)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/60 border-t-3 border-t-[#C084FC] p-5 sm:p-6 rounded-tl-2xl rounded-br-2xl rounded-tr-xs rounded-bl-xs space-y-3 shadow-xl hover:shadow-[0_15px_35px_rgba(192,132,252,0.3)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden animated-border-card-active"
               >
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="w-13 h-13 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 border-2 border-white transition-transform">
-                      <IconComp className="w-6 h-6 !text-white stroke-[2]" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white flex items-center justify-center shadow-md group-hover:scale-105 border border-white transition-transform">
+                      <IconComp className="w-5 h-5 !text-white stroke-[2.2]" />
                     </div>
-                    <span className="text-[10px] font-mono font-extrabold text-[#C084FC] bg-white/10 border border-white/20 px-3 py-1 rounded-full uppercase tracking-widest">
+                    <span className="text-[9px] sm:text-[10px] font-mono font-extrabold text-[#C084FC] bg-white/15 border border-white/25 px-2.5 py-0.5 rounded-full uppercase tracking-widest">
                       0{idx + 1} STEP
                     </span>
                   </div>
 
-                  <h3 className="font-sans text-xl text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight">
+                  <h3 className="font-sans text-lg sm:text-xl text-white font-black group-hover:text-[#C084FC] transition-colors leading-snug tracking-tight">
                     {pt.title}
                   </h3>
 
-                  <p className="text-sm text-[#C4B5FD] font-semibold leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 font-semibold leading-relaxed">
                     {pt.desc}
                   </p>
                 </div>
