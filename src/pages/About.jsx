@@ -57,8 +57,8 @@ export const About = () => {
                 MY PHILOSOPHY
               </span>
 
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#000000] font-normal leading-tight">
-                "Every wedding is different. Every couple has a different story. My goal is not to manufacture moments, but to <span className="font-cursive text-purple-700 font-normal">notice the ones that happen naturally."</span>
+              <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl text-[#000000] font-bold leading-tight">
+                "Every wedding is different. Every couple has a different story. My goal is not to manufacture moments, but to <span className="text-purple-700 font-bold">notice the ones that happen naturally."</span>
               </h2>
 
               <div className="space-y-4 text-studio-muted text-sm sm:text-base font-light leading-relaxed">

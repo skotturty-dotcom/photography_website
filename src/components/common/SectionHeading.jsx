@@ -19,14 +19,14 @@ export const SectionHeading = ({
       {subtitle && (
         <div className="inline-flex items-center space-x-2 bg-purple-100/90 border border-purple-300 px-4 py-1.5 rounded-full shadow-xs mb-1">
           <Sparkles className="w-3.5 h-3.5 text-purple-700" />
-          <span className="text-[11px] font-body tracking-[0.25em] text-purple-950 uppercase font-extrabold">
+          <span className="text-[11px] font-sans tracking-[0.25em] text-purple-950 uppercase font-extrabold">
             {subtitle}
           </span>
         </div>
       )}
 
       {title && (
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#000000] tracking-tight leading-[1.15] max-w-4xl">
+        <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#000000] tracking-tight leading-[1.15] max-w-4xl">
           {title}
         </h2>
       )}

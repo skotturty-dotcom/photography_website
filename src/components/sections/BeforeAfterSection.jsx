@@ -123,7 +123,7 @@ export const BeforeAfterSection = () => {
                   )}
                 </div>
                 <div>
-                  <h4 className={`font-serif text-sm font-bold tracking-tight ${isSelected ? 'text-purple-950 font-black' : 'text-[#000000]'}`}>
+                  <h4 className={`font-sans text-sm font-bold tracking-tight ${isSelected ? 'text-purple-950 font-black' : 'text-[#000000]'}`}>
                     {ex.title}
                   </h4>
                   <p className="text-[10px] uppercase font-mono tracking-widest text-purple-700 font-extrabold pt-0.5">

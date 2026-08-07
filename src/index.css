@@ -13,9 +13,9 @@
   --color-studio-[#1E1A2B]: #1E1A2B;
   --color-studio-darkbg: #0F0A1C;
 
-  --font-heading: "Meridien Pro", "Meridian", "Marcellus", "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-heading: "Manrope", "Outfit", sans-serif;
   --font-body: "Manrope", "Outfit", sans-serif;
-  --font-accent: "Meridien Pro", "Meridian", "Marcellus", sans-serif;
+  --font-accent: "Outfit", sans-serif;
 }
 
 html, body {
@@ -41,15 +41,9 @@ img, video, canvas, iframe, embed, object {
   max-width: 100%;
 }
 
-/* Main Section Headings (h1, h2) -> Meridien Pro Serif */
-h1, h2 {
-  font-family: "Meridien Pro", "Meridian", "Marcellus", "Cormorant Garamond", "Playfair Display", Georgia, serif !important;
-  letter-spacing: normal;
-}
-
-/* Card Sub-Headings (h3, h4, h5, h6) -> Meridien Pro Elegant Serif */
-h3, h4, h5, h6 {
-  font-family: "Meridien Pro", "Meridian", "Marcellus", "Cormorant Garamond", "Manrope", "Outfit", sans-serif !important;
+/* All Headings (h1, h2, h3, h4, h5, h6) -> Clean Sans-Serif Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", "Outfit", sans-serif !important;
   letter-spacing: normal !important;
   word-spacing: normal !important;
 }
@@ -57,17 +51,6 @@ h3, h4, h5, h6 {
 p {
   font-family: var(--font-body);
   color: #2D253F;
-}
-
-/* Meridien Pro Luxury Serif Utility */
-.font-meridien {
-  font-family: "Meridien Pro", "Meridian", "Marcellus", "Cormorant Garamond", "Playfair Display", Georgia, serif !important;
-}
-
-/* Editorial Luxury Serif Italic Utility */
-.font-cursive {
-  font-family: 'Meridien Pro', 'Meridian', 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
-  font-style: italic !important;
 }
 
 /* Custom Lavender Scrollbar */

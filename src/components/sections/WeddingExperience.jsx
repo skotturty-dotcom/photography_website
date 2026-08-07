@@ -75,7 +75,7 @@ export const WeddingExperience = () => {
                     </h3>
 
                     {/* AMERICAN DIAMOND LUXURY SHIMMER SERIF SUBHEADING */}
-                    <p className="font-serif font-black text-xs sm:text-sm tracking-wider uppercase pt-1 flex items-center space-x-1.5">
+                    <p className="font-sans font-black text-xs sm:text-sm tracking-wider uppercase pt-1 flex items-center space-x-1.5">
                       <Sparkles className="w-3.5 h-3.5 text-purple-600 shrink-0 inline-block animate-pulse" />
                       <span className="bg-gradient-to-r from-purple-950 via-purple-800 to-purple-950 bg-clip-text text-transparent">
                         {stg.subtitle}
