@@ -21,7 +21,6 @@ import { BeforeAfterSection } from '../components/sections/BeforeAfterSection';
 import { CameraBagSection } from '../components/sections/CameraBagSection';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { PortfolioGrid } from '../components/gallery/PortfolioGrid';
-import { TestimonialSlider } from '../components/sections/TestimonialSlider';
 import { EquipmentSection } from '../components/sections/EquipmentSection';
 import { CinematicReelsSection } from '../components/sections/CinematicReelsSection';
 import { packagesData } from '../data/packagesData';
@@ -324,19 +323,6 @@ export const Home = () => {
 
       {/* 9.5 PRESS & MEDIA RECOGNITION */}
       <PressFeatures />
-
-      {/* 10. TESTIMONIALS SECTION (#testimonials) */}
-      <section id="testimonials" className="py-24 sm:py-32 bg-white border-b border-studio-border scroll-mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            subtitle="CLIENT KIND WORDS"
-            title="Trusted By Couples & Families"
-            description="Read what our clients say about their experience with Arjun Mehra Photography."
-          />
-
-          <TestimonialSlider />
-        </div>
-      </section>
 
       {/* 11. FAQ SECTION (#faq) */}
       <section id="faq" className="py-24 bg-studio-bg border-b border-studio-border scroll-mt-16">
