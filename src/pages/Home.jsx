@@ -14,7 +14,6 @@ import { HorizontalStory } from '../components/sections/HorizontalStory';
 import { CinematicBanner } from '../components/sections/CinematicBanner';
 import { WeddingExperience } from '../components/sections/WeddingExperience';
 import { WhyChooseUs } from '../components/sections/WhyChooseUs';
-import { DestinationVenues } from '../components/sections/DestinationVenues';
 import { PressFeatures } from '../components/sections/PressFeatures';
 import { HeirloomAlbumsSection } from '../components/sections/HeirloomAlbumsSection';
 import { PreweddingGuideSection } from '../components/sections/PreweddingGuideSection';
@@ -202,9 +201,6 @@ export const Home = () => {
 
       {/* 6.5 WHY COUPLES CHOOSE ARJUN */}
       <WhyChooseUs />
-
-      {/* 6.8 DESTINATION WEDDINGS & ROYAL VENUES */}
-      <DestinationVenues />
 
       {/* 7. CINEMATIC REELS & FILMS SHOWCASE SECTION */}
       <CinematicReelsSection />
