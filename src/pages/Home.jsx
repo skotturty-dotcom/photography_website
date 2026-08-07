@@ -244,7 +244,7 @@ export const Home = () => {
                 }`}
               >
                 {pkg.highlighted && (
-                  <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 text-white text-xs uppercase font-extrabold tracking-[0.25em] px-7 py-2 rounded-full shadow-lg border border-purple-300 animate-pulse">
+                  <span className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-700 via-purple-600 to-pink-600 text-white text-xs uppercase font-extrabold tracking-[0.25em] px-7 py-2 rounded-full shadow-2xl border-2 border-white z-30 animate-pulse whitespace-nowrap">
                     {pkg.badge}
                   </span>
                 )}
