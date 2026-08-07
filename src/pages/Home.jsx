@@ -148,7 +148,7 @@ export const Home = () => {
             {servicesData.slice(0, 8).map((service) => (
               <div
                 key={service.id}
-                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 p-6 rounded-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 p-6 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-5 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -157,7 +157,7 @@ export const Home = () => {
                     </span>
                   </div>
 
-                  <div className="aspect-[16/9] overflow-hidden rounded-sm bg-studio-elevated border border-purple-200">
+                  <div className="aspect-[16/9] overflow-hidden rounded-tl-2xl rounded-br-2xl rounded-tr-xs rounded-bl-xs bg-studio-elevated border border-purple-200">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -177,7 +177,7 @@ export const Home = () => {
                 <div className="pt-4 border-t border-purple-200">
                   <Link
                     to="/services"
-                    className="w-full py-3 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-sm hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-1.5"
+                    className="w-full py-3 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-tl-xl rounded-br-xl rounded-tr-xs rounded-bl-xs hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-1.5"
                   >
                     <span>View Service Inclusions</span>
                     <ArrowRight className="w-3.5 h-3.5" />

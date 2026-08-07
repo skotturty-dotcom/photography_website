@@ -36,7 +36,7 @@ export const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 p-8 rounded-sm space-y-6 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white border-2 border-purple-200 border-t-4 border-t-purple-600 p-8 rounded-tl-3xl rounded-br-3xl rounded-tr-sm rounded-bl-sm space-y-6 shadow-md hover:shadow-2xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
@@ -45,7 +45,7 @@ export const Services = () => {
                     </span>
                   </div>
 
-                  <div className="aspect-[16/9] overflow-hidden rounded-sm bg-studio-elevated border border-purple-200">
+                  <div className="aspect-[16/9] overflow-hidden rounded-tl-2xl rounded-br-2xl rounded-tr-xs rounded-bl-xs bg-studio-elevated border border-purple-200">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -79,7 +79,7 @@ export const Services = () => {
                 <div className="pt-4 border-t border-purple-200">
                   <Link
                     to="/booking"
-                    className="w-full py-3.5 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-sm hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-2"
+                    className="w-full py-3.5 bg-[#7C3AED] text-white text-xs font-extrabold uppercase tracking-widest rounded-tl-xl rounded-br-xl rounded-tr-xs rounded-bl-xs hover:bg-[#6D28D9] transition-colors shadow-md inline-flex items-center justify-center space-x-2"
                   >
                     <span>Book This Service</span>
                     <ArrowRight className="w-4 h-4" />
