@@ -13,10 +13,9 @@
   --color-studio-[#1E1A2B]: #1E1A2B;
   --color-studio-darkbg: #0F0A1C;
 
-  --font-heading: "Syne", "Plus Jakarta Sans", sans-serif;
-  --font-serif: "Instrument Serif", "Bodoni Moda", Georgia, serif;
-  --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-accent: "Syne", sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Manrope", "Outfit", sans-serif;
+  --font-accent: "Outfit", sans-serif;
 }
 
 html, body {
@@ -42,29 +41,32 @@ img, video, canvas, iframe, embed, object {
   max-width: 100%;
 }
 
-/* Headings (h1, h2) -> Syne Bold Modern Display Font */
+/* Main Section Headings (h1, h2) -> Playfair Display Serif */
 h1, h2 {
-  font-family: "Syne", "Plus Jakarta Sans", sans-serif !important;
-  letter-spacing: -0.02em;
+  font-family: "Playfair Display", Georgia, serif !important;
+  letter-spacing: normal;
 }
 
-/* Card Titles & Sub-Headings (h3, h4, h5, h6) -> Syne / Plus Jakarta Sans */
+/* Card Sub-Headings (h3, h4, h5, h6) -> Clean Simple Sans-Serif with Standard Spacing */
 h3, h4, h5, h6 {
-  font-family: "Syne", "Plus Jakarta Sans", sans-serif !important;
-  letter-spacing: -0.01em !important;
-}
-
-.font-serif {
-  font-family: "Instrument Serif", "Bodoni Moda", Georgia, serif !important;
-}
-
-.font-display {
-  font-family: "Syne", sans-serif !important;
+  font-family: "Manrope", "Outfit", sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
 }
 
 p {
   font-family: var(--font-body);
   color: #2D253F;
+}
+
+/* Editorial Luxury Serif Italic Utility */
+.font-cursive {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
 }
 
 /* Custom Lavender Scrollbar */
