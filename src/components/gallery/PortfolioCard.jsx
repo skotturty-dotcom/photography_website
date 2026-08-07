@@ -17,7 +17,7 @@ export const PortfolioCard = ({ item, onClick }) => {
         />
         
         {/* Subtle Overlay on Hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-60 group-hover:opacity-85 transition-opacity duration-500" />
 
         {/* Video Play Badge for Cinematic category */}
         {item.categoryKey === 'CINEMATIC' && (
@@ -33,19 +33,10 @@ export const PortfolioCard = ({ item, onClick }) => {
           </span>
         </div>
 
-        {/* Bottom Details Overlay - NO COUPLE NAMES */}
-        <div className="absolute bottom-0 left-0 right-0 p-5 z-10 flex items-center justify-between transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
-          <div className="space-y-0.5">
-            <span className="text-sm sm:text-base text-white font-bold uppercase tracking-wider block drop-shadow-md">
-              {item.location}
-            </span>
-            <span className="text-xs text-purple-200 uppercase tracking-widest font-mono block font-semibold">
-              {item.year} COLLECTION
-            </span>
-          </div>
-
-          <div className="w-9 h-9 rounded-full bg-purple-700 text-white flex items-center justify-center group-hover:bg-white group-hover:text-purple-700 transition-all shrink-0 ml-3 shadow-md">
-            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        {/* Bottom Action Icon Overlay - NO TEXT OR NAMES */}
+        <div className="absolute bottom-4 right-4 z-10">
+          <div className="w-10 h-10 rounded-full bg-purple-700 text-white flex items-center justify-center group-hover:bg-white group-hover:text-purple-700 transition-all shrink-0 shadow-lg group-hover:scale-110">
+            <ArrowUpRight className="w-5 h-5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </div>
         </div>
       </div>
