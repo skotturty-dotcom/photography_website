@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Sparkles } from 'lucide-react';
 import { portfolioData, portfolioCategories } from '../../data/portfolioData';
 import { PortfolioCard } from './PortfolioCard';
 import { Lightbox } from './Lightbox';
@@ -22,9 +23,9 @@ export const PortfolioGrid = ({ initialCategory = 'ALL', limit }) => {
   };
 
   return (
-    <div className="space-y-10">
-      {/* FILTER CATEGORY TABS */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 pb-4">
+    <div className="space-y-12">
+      {/* EYE-CATCHING LUXURY FILTER CATEGORY TABS */}
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pb-4">
         {portfolioCategories.map((cat) => {
           const isActive = activeCategory === cat;
           return (
@@ -32,13 +33,14 @@ export const PortfolioGrid = ({ initialCategory = 'ALL', limit }) => {
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-[0.2em] transition-all duration-300 rounded-full cursor-pointer shadow-xs ${
+              className={`px-6 py-3 text-xs sm:text-sm font-sans font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-full cursor-pointer flex items-center space-x-2 border-2 ${
                 isActive
-                  ? 'bg-[#7C3AED] text-white border-2 border-purple-400 shadow-lg scale-105'
-                  : 'bg-white text-purple-950 border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 shadow-xs'
+                  ? 'bg-gradient-to-r from-purple-700 via-purple-600 to-pink-600 text-white border-white shadow-[0_10px_30px_rgba(124,58,237,0.45)] scale-105 z-10'
+                  : 'bg-white text-purple-950 border-purple-300/80 hover:border-purple-600 hover:bg-gradient-to-r hover:from-purple-700 hover:to-purple-900 hover:text-white shadow-md hover:shadow-xl hover:scale-105'
               }`}
             >
-              {cat}
+              {isActive && <Sparkles className="w-3.5 h-3.5 text-purple-200 animate-pulse shrink-0" />}
+              <span>{cat}</span>
             </button>
           );
         })}
