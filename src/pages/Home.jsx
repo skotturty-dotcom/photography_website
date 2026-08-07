@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Mail, MapPin, Clock, Play } from 'lucide-react';
+import { ArrowRight, Phone, Mail, MapPin, Clock, Play, Sparkles } from 'lucide-react';
 import { InstagramIcon } from '../components/common/SocialIcons';
 import { photographerConfig } from '../config/photographerConfig';
 import { getWhatsAppLink } from '../utils/whatsapp';
