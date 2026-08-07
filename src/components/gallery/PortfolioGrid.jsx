@@ -24,23 +24,24 @@ export const PortfolioGrid = ({ initialCategory = 'ALL', limit }) => {
 
   return (
     <div className="space-y-12">
-      {/* EYE-CATCHING LUXURY FILTER CATEGORY TABS */}
+      {/* ELEGANT PLAYFAIR DISPLAY SERIF FILTER CATEGORY TABS */}
       <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pb-4">
         {portfolioCategories.map((cat) => {
           const isActive = activeCategory === cat;
+          const displayLabel = cat === 'ALL' ? 'All' : cat === 'PRE-WEDDINGS' ? 'Pre-Weddings' : cat.charAt(0) + cat.slice(1).toLowerCase();
           return (
             <button
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-3 text-xs sm:text-sm font-sans font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-full cursor-pointer flex items-center space-x-2 border-2 ${
+              className={`px-6 py-3 font-serif font-bold text-sm sm:text-base tracking-wide transition-all duration-300 rounded-full cursor-pointer flex items-center space-x-2 border-2 ${
                 isActive
                   ? 'bg-gradient-to-r from-purple-700 via-purple-600 to-pink-600 text-white border-white shadow-[0_10px_30px_rgba(124,58,237,0.45)] scale-105 z-10'
                   : 'bg-white text-purple-950 border-purple-300/80 hover:border-purple-600 hover:bg-gradient-to-r hover:from-purple-700 hover:to-purple-900 hover:text-white shadow-md hover:shadow-xl hover:scale-105'
               }`}
             >
-              {isActive && <Sparkles className="w-3.5 h-3.5 text-purple-200 animate-pulse shrink-0" />}
-              <span>{cat}</span>
+              {isActive && <Sparkles className="w-4 h-4 text-purple-200 animate-pulse shrink-0" />}
+              <span>{displayLabel}</span>
             </button>
           );
         })}
