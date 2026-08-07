@@ -57,18 +57,18 @@ export const WhyChooseUs = () => {
             return (
               <div
                 key={pillar.id}
-                className="bg-gradient-to-br from-[#1E1A2B] via-[#161224] to-[#0F0A1C] border-2 border-purple-600/60 border-t-4 border-t-[#A78BFA] p-8 rounded-sm space-y-5 shadow-2xl hover:shadow-[0_15px_35px_rgba(124,58,237,0.35)] hover:border-purple-400 transition-all duration-300 group"
+                className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] p-8 rounded-sm space-y-5 shadow-xl hover:shadow-[0_15px_35px_rgba(167,139,250,0.3)] hover:border-purple-300 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-full bg-purple-950/90 text-[#C084FC] border border-purple-500/50 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-[#C084FC] transition-all">
+                  <div className="w-12 h-12 rounded-full bg-purple-950/90 text-[#C084FC] border border-purple-400/60 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-[#C084FC] transition-all">
                     <IconComp className="w-6 h-6 !text-[#C084FC] group-hover:!text-purple-950 transition-colors" />
                   </div>
-                  <span className="font-mono text-xs !text-white font-extrabold bg-white/15 px-3 py-1 rounded-full border border-white/40 shadow-xs tracking-wider">
+                  <span className="font-mono text-xs !text-white font-extrabold bg-white/20 px-3 py-1 rounded-full border border-white/40 shadow-xs tracking-wider">
                     PILLAR {pillar.id}
                   </span>
                 </div>
 
-                <h3 className="font-sans text-xl sm:text-2xl !text-[#DDD6FE] font-bold group-hover:!text-white transition-colors leading-snug tracking-normal">
+                <h3 className="font-sans text-xl sm:text-2xl !text-[#F3E8FF] font-bold group-hover:!text-white transition-colors leading-snug tracking-normal">
                   {pillar.title}
                 </h3>
 
