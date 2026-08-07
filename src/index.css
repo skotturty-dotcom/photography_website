@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-studio-bg: #FAF7FD;
+  --color-studio-card: #FFFFFF;
+  --color-studio-elevated: #F3E8FF;
+  --color-studio-border: #E9D5FF;
+  --color-studio-text: #1E1A2B;
+  --color-studio-muted: #584E6D;
+  --color-studio-gold: #A78BFA;
+  --color-studio-gold-hover: #9333EA;
+  --color-studio-ivory: #FAF7FD;
+  --color-studio-[#1E1A2B]: #1E1A2B;
+  --color-studio-darkbg: #0F0A1C;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Manrope", "Outfit", sans-serif;
+  --font-accent: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--color-studio-bg);
+  color: var(--color-studio-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Section Headings (h1, h2) -> Playfair Display Serif */
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif !important;
+  letter-spacing: normal;
+}
+
+/* Card Sub-Headings (h3, h4, h5, h6) -> Clean Simple Sans-Serif with Standard Spacing */
+h3, h4, h5, h6 {
+  font-family: "Manrope", "Outfit", sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+p {
+  font-family: var(--font-body);
+  color: #2D253F;
+}
+
+/* Editorial Luxury Serif Italic Utility */
+.font-cursive {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+}
+
+/* Custom Lavender Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7FD;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+/* Studio Lavender & White Glass & Cards */
+.studio-glass {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+.studio-card-shadow {
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.12);
+}
+
+.studio-card-glow:hover {
+  box-shadow: 0 20px 40px -15px rgba(147, 51, 234, 0.25);
+}
