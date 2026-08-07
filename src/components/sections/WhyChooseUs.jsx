@@ -59,13 +59,10 @@ export const WhyChooseUs = () => {
                 key={pillar.id}
                 className="bg-gradient-to-br from-[#3B2B52] via-[#312247] to-[#26183B] border-2 border-purple-400/50 border-t-4 border-t-[#C084FC] p-8 rounded-sm space-y-5 shadow-xl hover:shadow-[0_15px_35px_rgba(167,139,250,0.3)] hover:border-purple-300 transition-all duration-300 group"
               >
-                <div className="flex items-center justify-between">
+                <div>
                   <div className="w-12 h-12 rounded-full bg-white/15 text-white border border-white/40 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-white transition-all">
                     <IconComp className="w-6 h-6 !text-white group-hover:!text-purple-950 transition-colors" />
                   </div>
-                  <span className="font-mono text-xs !text-white font-extrabold bg-white/20 px-3 py-1 rounded-full border border-white/40 shadow-xs tracking-wider">
-                    PILLAR {pillar.id}
-                  </span>
                 </div>
 
                 <h3 className="font-sans text-xl sm:text-2xl !text-[#C4B5FD] font-bold leading-snug tracking-normal">
